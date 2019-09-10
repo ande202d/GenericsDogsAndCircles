@@ -30,6 +30,10 @@ namespace GenericsDogsAndCircles
             Console.WriteLine(ComparerDog.Largest(dog1, dog2, dog3));
             Console.WriteLine(ComparerCircle.Largest(c1,c2,c3));
 
+            EvenBetterObjectComparer TotalComparer = new EvenBetterObjectComparer();
+            Console.WriteLine(TotalComparer.Largest(dog1,dog2,dog3, new DogCompareByHeight()));
+            Console.WriteLine(TotalComparer.Largest(c1,c2,c3, new CircleCompareByX()));
+
             KeepConsoleWindowOpen();
         }
 
